@@ -4,4 +4,6 @@
     <string name="map">Map</string>
     <string name="news">News</string>
     <string name="time">TextView</string>
+    <string name="username">username</string>
+    <string name="search">Search</string>
 </resources>
