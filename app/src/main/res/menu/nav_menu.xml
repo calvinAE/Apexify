@@ -8,7 +8,13 @@
     <item android:title="@string/map"
         android:id="@+id/Map"
         android:icon="@drawable/map"/>
+    <item android:title="@string/store"
+        android:id="@+id/Store"/>
     <item android:title="@string/news"
         android:id="@+id/News"
         android:icon="@drawable/newspaper"/>
+    <item android:title="@string/options"
+        android:id="@+id/Options"/>
+
+
 </menu>

@@ -2,16 +2,28 @@ package com.example.apexify
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
+import android.view.MenuItem
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import com.example.apexify.Fragments.MapFragment
-import com.example.apexify.Fragments.NewsFragment
-import com.example.apexify.Fragments.StatsFragment
+import com.example.apexify.Fragments.*
 import com.example.apexify.databinding.ActivityMainBinding
+import java.security.cert.PKIXRevocationChecker.Option
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var navToggle: ActionBarDrawerToggle
 
+
+    private fun replaceFragment(fragment: Fragment){
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.layout,fragment)
+        fragmentTransaction.commit()
+
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -19,28 +31,35 @@ class MainActivity : AppCompatActivity() {
 
 
         //Set map and check map icon
-        replaceFragment(MapFragment())
-        binding.bottomNavigation.menu.findItem(R.id.Map).setChecked(true)
+        binding.apply {
+            navToggle=  ActionBarDrawerToggle(this@MainActivity,drawerLayout,R.string.app_name,R.string.app_name)
+            drawerLayout.addDrawerListener(navToggle)
+            navToggle.syncState()
 
-        binding.bottomNavigation.setOnItemSelectedListener {
-            when(it.itemId){
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            replaceFragment(MapFragment())
 
-                R.id.Map -> replaceFragment(MapFragment())
-                R.id.News -> replaceFragment(NewsFragment())
-                R.id.Stats -> replaceFragment(StatsFragment())
+            navView.setNavigationItemSelectedListener {
+                when(it.itemId){
+                    R.id.Map->replaceFragment(MapFragment())
+                    R.id.Stats->replaceFragment(StatsFragment())
+                    R.id.News->replaceFragment(NewsFragment())
+                    R.id.Options->replaceFragment(OptionsFragment())
+                    R.id.Store->replaceFragment(StoreFragment())
 
-                else ->{
-                }
+
             }
-            true
+                true
+        }
+
         }
     }
+        override fun onOptionsItemSelected(item: MenuItem): Boolean {
+            if(navToggle.onOptionsItemSelected(item)){
+                true
+            }
 
-    private fun replaceFragment(fragment: Fragment){
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout,fragment)
-        fragmentTransaction.commit()
+            return super.onOptionsItemSelected(item)
+            }
     }
 
-}
