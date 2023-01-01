@@ -22,34 +22,31 @@
 
     <TextView
         android:id="@+id/tvMapTitle"
-        android:layout_width="196dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
+        android:layout_width="351dp"
+        android:layout_height="71dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="110dp"
         android:fontFamily="@font/apex"
         android:textAlignment="center"
         android:textColor="#A4373D"
-        android:textSize="34sp"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_background" />
 
     <TextView
         android:id="@+id/tv_remainigTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="193dp"
+        android:layout_height="57dp"
         android:layout_marginTop="12dp"
-        android:layout_marginBottom="493dp"
         android:fontFamily="@font/apex"
         android:text="@string/time"
         android:textColor="#A4373D"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvMapTitle"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.01"
         tools:text="Remaining time" />
 </androidx.constraintlayout.widget.ConstraintLayout>
