@@ -37,15 +37,17 @@
 
         <TextView
             android:id="@+id/tv_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="176dp"
+            android:layout_width="155dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="148dp"
             android:fontFamily="@font/apex"
             android:text="TextView"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.038"
             app:layout_constraintStart_toEndOf="@+id/img_store" />
 
         <ImageView
