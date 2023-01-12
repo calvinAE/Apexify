@@ -4,21 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/apex_beige"
-    tools:context=".Fragments.MapFragment">
+    android:background="@color/background"
+    tools:context=".fragments.MapFragment">
 
 
     <ImageView
         android:id="@+id/img_background"
-        android:layout_width="446dp"
+        android:layout_width="match_parent"
         android:layout_height="167dp"
         android:contentDescription="@string/map"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/worldsedge" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvMapTitle"
@@ -27,11 +26,12 @@
         android:layout_marginTop="28dp"
         android:fontFamily="@font/apex"
         android:textAlignment="center"
-        android:textColor="#A4373D"
+        android:textColor="@color/apex_red2"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_background" />
+        app:layout_constraintTop_toBottomOf="@+id/img_background"
+        tools:text="Olympus" />
 
     <TextView
         android:id="@+id/tv_remainigTime"
@@ -40,7 +40,7 @@
         android:layout_marginTop="12dp"
         android:fontFamily="@font/apex"
         android:text="@string/time"
-        android:textColor="#A4373D"
+        android:textColor="@color/apex_red2"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
