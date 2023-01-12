@@ -2,14 +2,11 @@ package com.example.apexify
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import com.example.apexify.Fragments.*
+import com.example.apexify.fragments.*
 import com.example.apexify.databinding.ActivityMainBinding
-import java.security.cert.PKIXRevocationChecker.Option
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        //Set map and check map icon
         binding.apply {
             navToggle=  ActionBarDrawerToggle(this@MainActivity,drawerLayout,R.string.app_name,R.string.app_name)
             drawerLayout.addDrawerListener(navToggle)
@@ -46,6 +42,7 @@ class MainActivity : AppCompatActivity() {
                     R.id.News->replaceFragment(NewsFragment())
                     R.id.Options->replaceFragment(OptionsFragment())
                     R.id.Store->replaceFragment(StoreFragment())
+                    R.id.Loadout->replaceFragment(LoadOutFragment())
 
 
             }
