@@ -1,10 +1,13 @@
-package com.example.apexify.Fragments
+package com.example.apexify.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
+import androidx.lifecycle.lifecycleScope
 import com.example.apexify.R
 import com.example.apexify.databinding.FragmentStatsBinding
 import okhttp3.*
@@ -31,7 +34,8 @@ class StatsFragment : Fragment(R.layout.fragment_stats) {
 
         client.newCall(request).enqueue(object: Callback {
             override fun onFailure(call: Call, e: IOException) {
-                TODO("Not yet implemented")
+                Toast.makeText(context,e.message,Toast.LENGTH_LONG).show()
+                println("error")
             }
 
             override fun onResponse(call: Call, response: Response) {
@@ -71,7 +75,7 @@ class StatsFragment : Fragment(R.layout.fragment_stats) {
                             bundle.putString("RankImg",rankImg)
                             bundle.putString("Kills",kills)
                             bundle.putString("Status",status)
-
+                            println(bundle)
                             //Move to detail fragment
                             val fragment = StatsDetailFragment()
                             val fragmentManager = this@StatsFragment.parentFragmentManager

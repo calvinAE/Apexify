@@ -1,4 +1,4 @@
-package com.example.apexify
+package com.example.apexify.adapters
 
 import android.content.Intent
 import android.net.Uri
@@ -7,10 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apexify.Model.NewsItem
-import com.example.apexify.Model.StoreItem
+import com.example.apexify.R
 import com.squareup.picasso.Picasso
 
 

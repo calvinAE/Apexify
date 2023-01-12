@@ -1,4 +1,4 @@
-package com.example.apexify.Fragments
+package com.example.apexify.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -12,7 +12,7 @@ import com.example.apexify.ApiInterface
 import com.example.apexify.Model.Store
 import com.example.apexify.Model.StoreItem
 import com.example.apexify.R
-import com.example.apexify.StoreAdapter
+import com.example.apexify.adapters.StoreAdapter
 import com.example.apexify.databinding.FragmentStoreBinding
 import retrofit2.Call
 import retrofit2.Callback

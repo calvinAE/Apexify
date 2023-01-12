@@ -1,4 +1,4 @@
-package com.example.apexify.Fragments
+package com.example.apexify.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.apexify.ApiInterface
 import com.example.apexify.Model.News
 import com.example.apexify.Model.NewsItem
-import com.example.apexify.NewsAdapter
+import com.example.apexify.adapters.NewsAdapter
 import com.example.apexify.R
 import com.example.apexify.databinding.FragmentNewsBinding
 import retrofit2.*

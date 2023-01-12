@@ -1,6 +1,5 @@
-package com.example.apexify
+package com.example.apexify.adapters
 
-import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apexify.Model.StoreItem
+import com.example.apexify.R
 import com.squareup.picasso.Picasso
 
 class StoreAdapter(private val dataSet: List<StoreItem>)  : RecyclerView.Adapter<StoreAdapter.ViewHolder>()  {
@@ -32,7 +32,7 @@ class StoreAdapter(private val dataSet: List<StoreItem>)  : RecyclerView.Adapter
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: StoreAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = dataSet[position]
         val price =  item.pricing.map { it.quantity}.toString() +  item.pricing.map { it.ref }.toString()
 

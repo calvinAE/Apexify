@@ -1,4 +1,4 @@
-package com.example.apexify.Fragments
+package com.example.apexify.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
