@@ -2,7 +2,6 @@ package com.example.apexify
 
 import android.app.Application
 import com.example.apexify.database.LoadOutRoomDatabase
-import com.example.apexify.database.LoadOutRoomDatabase.Companion.getDatabase
 import com.example.apexify.database.repository.LoadOutRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
