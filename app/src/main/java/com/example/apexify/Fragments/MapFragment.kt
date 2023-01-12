@@ -1,7 +1,8 @@
-package com.example.apexify.Fragments
+package com.example.apexify.fragments
 
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,6 +28,10 @@ class MapFragment : Fragment(R.layout.fragment_map) {
     val url = URL("https://api.mozambiquehe.re/maprotation?auth=$auth"  )
 
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,22 +40,14 @@ class MapFragment : Fragment(R.layout.fragment_map) {
     ): View {
         _binding = FragmentMapBinding.inflate(inflater, container, false)
         val view = binding.root
-
-        val handler = Handler()
-        object : Runnable {
+        val mainHandler = Handler(Looper.getMainLooper())
+        mainHandler.post(object : Runnable {
             override fun run() {
-                handler.postDelayed(this, (1 * 60 * 1000).toLong())
                 fetchMap(url)
+                mainHandler.postDelayed(this, (1 * 60 * 1000).toLong())
             }
-        }.run()
+        })
         return view
-    }
-
-
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
     }
 
 
