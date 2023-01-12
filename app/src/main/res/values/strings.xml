@@ -6,4 +6,45 @@
     <string name="time">TextView</string>
     <string name="username">username</string>
     <string name="search">Search</string>
+    <string name="options">Options</string>
+    <string name="language">Language</string>
+    <string name="settings">Settings</string>
+    <string name="store">Store</string>
+    <string name="loadout">Loadout</string>
+    <string name="save">save</string>
+    <string name="primaryWeapon">Primary weapon</string>
+    <string name="secondaryWeapon">Secondary weapon</string>
+    <string name="Stats">Stats</string>
+    <string name="darkmode">Dark mode</string>
+    <string name="name">name</string>
+    <string-array name="weapons">
+       <item>Bocek Bow</item>
+        <item>Flatline</item>
+        <item>Kraber</item>
+        <item>R-301 Carbine</item>
+        <item>R-99</item>
+        <item>Wingman</item>
+        <item>CAR</item>
+        <item>Havoc</item>
+        <item>Mastiff</item>
+        <item>Peacekeeper</item>
+        <item>Rampage</item>
+        <item>Spitfire</item>
+        <item>Volt</item>
+        <item>Alternator</item>
+        <item>Charge Rifle</item>
+        <item>G7 Scout</item>
+        <item>Hemlok</item>
+        <item>Mozambique</item>
+        <item>Sentinel</item>
+        <item>30-30 Repeater</item>
+        <item>Devotion</item>
+        <item>L-Star</item>
+        <item>Longbow</item>
+        <item>Prowler</item>
+        <item>P2020</item>
+        <item>EVA-8</item>
+        <item>RE-45</item>
+        <item>Triple Take</item>
+    </string-array>
 </resources>
