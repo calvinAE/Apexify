@@ -4,6 +4,7 @@
     <color name="apex_red">#B93038</color>
     <color name="apex_red2">#A4373D</color>
     <color name="navigation">#A4373D</color>
+    <color name="secondary_text">#ECECEC</color>
     <color name="apex_navbar">#30090B</color>
     <color name="apex_dark">#FFFFFF</color>
     <color name="purple_200">#FFBB86FC</color>
@@ -14,4 +15,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="background">#E3DFD6</color>
+    <color name="rv_background">#D1CEC7</color>
+
 </resources>
