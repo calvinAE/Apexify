@@ -17,6 +17,7 @@
     <string name="Stats">Stats</string>
     <string name="darkmode">Dark mode</string>
     <string name="name">name</string>
+    <string name="add">Add</string>
     <string-array name="weapons">
        <item>Bocek Bow</item>
         <item>Flatline</item>
