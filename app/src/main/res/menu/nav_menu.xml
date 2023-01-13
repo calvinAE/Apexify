@@ -9,14 +9,16 @@
         android:id="@+id/Map"
         android:icon="@drawable/map"/>
     <item android:title="@string/store"
-        android:id="@+id/Store"/>
+        android:id="@+id/Store"
+        android:icon="@drawable/bag"/>
     <item android:title="@string/news"
         android:id="@+id/News"
         android:icon="@drawable/newspaper"/>
     <item android:title="@string/options"
-        android:id="@+id/Options"/>
+        android:id="@+id/Options"
+        android:icon="@drawable/settings"/>
     <item android:title="@string/loadout"
-        android:id="@+id/Loadout"/>
-
+        android:id="@+id/Loadout"
+        android:icon="@drawable/optics"/>
 
 </menu>
